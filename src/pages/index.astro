@@ -1,8 +1,10 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { SITE_IMAGE } from '../consts';
+const today = new Date();
+
+
 ---
 
 <!doctype html>
@@ -11,40 +13,124 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
-		<Header />
+		<header>
+			<div id="head_main">
+				<img class="logo" src ={SITE_IMAGE}  width="30" height="30">
+				<div id="top_contact"><p>Need a Paid Media Partner? <button id="myBtn">Let's talk.</button> 
+				</p></div>
+			</div>
+		</header>
+</div>
 		<main>
-			<h1>Welcome to Carolina Digital</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p style="text-align:center;">Let's Talk</p>
+	<form method="POST" action="https://formspree.io/f/mrbqzgly">
+		<label for="name">Name</label>
+		<input id="name" type="text" name="name" required />
+  
+		<label for="email">Email Address</label>
+		<input id="email" type="email" name="email" required />
+  
+		<label for="message">Message</label>
+		<textarea id="message" name="message" required></textarea>
+  
+		<button type="submit">Submit</button>
+	  </form>
+	
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+	
+			<div>
+			<h1>Profit-Focused <span style="color:#878686;">Paid Media Management</span></h1>
+			<h2>
+				Carolina Digital is a Raleigh, NC based paid search and paid social media company. We partner with organizations to unlock the full potential of paid ads to maximize ad spend.
+			</h2>
+			<br>
+			</div>
+			<nav>
+				<a href="#services">Services</a>
+				<a href="#expertise">Expertise</a>
+				<a href="#about">About</a>
+			</nav>
+			<div id="services">
+				<h3><span>#</span>Services</h3>
+				<p>
+					We provide paid media services for B2B and B2C industries. Our industry experience includes hotels, attorneys, SAAS companies, PR and advertising agencies. We are available for ongoing services, consultations and audits. 
+				</p>
+			</div>
+			<div id="expertise">
+				<h3><span>#</span>Expertise</h3>
+				<p>We have worked with the most popular ad platforms and analytical tools. </p>
+				<div id="exp_list">
+				<span class="exp">Google Ads</span>
+				<span class="exp">Google Analytics</span>
+				<span class="exp">Google Tags</span>
+				<span class="exp">Meta Ads</span>
+				<span class="exp">LinkedIn</span>
+				<span class="exp">SalesFroce</span>
+				<span class="exp">SA360</span>
+				<span class="exp">Microsoft Search Ads</span>
+				<span class="exp">Looker Studio</span>
+				<span class="exp">SEM Rush</span>
+			</div>
+			</div>
+			<div id="about">
+				<h3><span>#</span>About</h3>
+				<p>
+					It all started with our founder contracting as a Google Ads consultant for small businesses. He then went on to work in agencies as a digital marketer. After nearly a decade of experience, Carolina Digital was founded to focus on the digital marketing needs of the robust businesses here in Raleigh, NC. Our approach is to focus on data-driven performance marketing. We try to connect every dollar that is spent to profit. We believe that marketing should be judged by ROI. 
+				</p>
+
+			</div>
+
 		</main>
-		<Footer />
+		<footer>
+			<div id="foot_main">
+				<img class="logo" src ={SITE_IMAGE} width="30" height="30">
+			<div class="social-links">
+				<a href="https://www.linkedin.com/company/carolina-digital-llc/" target="_blank">
+					<span>LinkedIn</span>
+				</a><br>
+			</div>
+			<div style="display:block; font-size: .9em;">
+			&copy; {today.getFullYear()} Carolina Digital. All rights reserved.
+		</div>
+		</footer>
 	</body>
 </html>

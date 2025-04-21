@@ -18,11 +18,14 @@
     "@astrojs/mdx": "4.2.3",
     "@astrojs/rss": "4.0.11",
     "@astrojs/sitemap": "3.3.0",
-    "astro": "5.6.0",
+    "@iconify/json": "^2.2.329",
+    "astro": "^5.6.0",
+    "free-astro-components": "^1.2.0",
     "typescript": "5.8.2"
   },
   "devDependencies": {
-    "wrangler": "4.7.0"
+    "sass-embedded": "^1.86.3",
+    "wrangler": "^4.12.0"
   },
   "scripts": {
     "astro": "astro",
@@ -33,5 +36,18 @@
     "preview": "astro build && wrangler dev",
     "types": "wrangler types"
   },
-  "type": "module"
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jthomas216/muddy-leaf-0254.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jthomas216/muddy-leaf-0254/issues"
+  },
+  "homepage": "https://github.com/jthomas216/muddy-leaf-0254#readme"
 }
