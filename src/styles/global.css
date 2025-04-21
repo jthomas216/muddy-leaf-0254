@@ -75,11 +75,12 @@ h1 {
 h2 {
   font-size: 1em;
   font-weight: 500; 
-  margin:0px auto;
   padding-top: 30px;
   text-align: center;
   max-width: 480px;
-  width: calc(100% - 4em);
+  width: calc(100% - 2em);
+  padding-left: 0px;
+  padding-right: 0px;
 }
 h3 {
   font-size: 1.3em;
