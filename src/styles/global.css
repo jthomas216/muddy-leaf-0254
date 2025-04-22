@@ -360,3 +360,8 @@ button#myBtn:hover {
 img.logo {
   margin-top: 20px;
 }
+h2 span {
+  color: #626262;
+  border-bottom-style: dotted;
+  border-bottom-width: 1px;
+}
