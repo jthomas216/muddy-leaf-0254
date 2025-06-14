@@ -2,135 +2,163 @@
 import BaseHead from '../components/BaseHead.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { SITE_IMAGE } from '../consts';
-const today = new Date();
-
-
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<script>
+			const sections = document.querySelectorAll("section");
+const navLi = document.querySelectorAll("header nav ul li");
+window.onscroll = () => {
+  var current = "";
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    if (pageYOffset >= sectionTop - 60) {
+      current = section.getAttribute("id"); }
+  });
+
+  navLi.forEach((li) => {
+    li.classList.remove("active");
+    if (li.classList.contains(current)) {
+      li.classList.add("active");
+    }
+  });
+};
+			</script>
 	</head>
 	<body>
-		<header>
-			<div id="head_main">
-				<img class="logo" src ={SITE_IMAGE}  width="30" height="30">
-				<div id="top_contact"><p>Need a Paid Media Partner? <button id="myBtn">Let's talk.</button> 
-				</p></div>
-			</div>
-		</header>
-</div>
-		<main>
-			
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p style="text-align:center;">Let's Talk</p>
-	<form method="POST" action="https://formspree.io/f/mrbqzgly">
-		<label for="name">Name</label>
-		<input id="name" type="text" name="name" required />
-  
-		<label for="email">Email Address</label>
-		<input id="email" type="email" name="email" required />
-  
-		<label for="message">Message</label>
-		<textarea id="message" name="message" required></textarea>
-  
-		<button type="submit">Submit</button>
-	  </form>
-	
-  </div>
-
-</div>
-
-<script>
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
-
-	
+<div class ="wrapper">
+		<header class="column">
 			<div>
-			<h1>Profit-Focused <span style="color:#878686;">Paid Media Management</span></h1>
-			<h2>
-				<span>Carolina Digital</span> is a Raleigh based paid search and paid social media company. We partner with organizations to unlock the full potential of paid ads to maximize ad spend.
-			</h2>
-			<br>
+			<h1>Greetings, I'm Jason</h1>
+			<h2 class="head">Digital Marketing Specialist</h2>
+			<p class="reg">
+				I am a Raleigh, NC based paid search and paid social media expert. My primary focus is connecting ad spend to profit.
+			</p>
 			</div>
+			<div>
 			<nav>
-				<a href="#services">Services</a>
-				<a href="#expertise">Expertise</a>
-				<a href="#about">About</a>
+				<ul>
+					<li class="about active"><a href="#about"><span class="nav_hl"></span><span class="move_text">ABOUT</span></a></li>
+					<li class="experience"><a href="#experience"><span class="nav_hl"></span><span class="move_text"></span>EXPERIENCE</span></a></li>
+					<li class="services"><a href="#services"><span class="nav_hl"></span><span class="move_text"></span>SERVICES</span></a></li>
+					<li class="contact"><a href="#contact"><span class="nav_hl"></span><span class="move_text"></span>CONTACT</span></a></li>
+				</ul>				
 			</nav>
-			<div id="services">
-				<h3><span>#</span>Services</h3>
-				<p>
-					We provide paid media services for B2B and B2C industries. Our industry experience includes hotels, attorneys, SAAS companies, nonprofits, PR and advertising agencies. We are available for ongoing services, consultations and audits. 
-				</p>
-			</div>
-			<div id="expertise">
-				<h3><span>#</span>Expertise</h3>
-				<p>We work with the most popular ad platforms and analytical tools. </p>
-				<div id="exp_list">
-				<span class="exp">Google Ads</span>
-				<span class="exp">Google Analytics</span>
-				<span class="exp">Google Tags</span>
-				<span class="exp">Meta Ads</span>
-				<span class="exp">LinkedIn</span>
-				<span class="exp">SalesFroce</span>
-				<span class="exp">SA360</span>
-				<span class="exp">Microsoft Search Ads</span>
-				<span class="exp">Looker Studio</span>
-				<span class="exp">SEM Rush</span>
-			</div>
-			</div>
-			<div id="about">
-				<h3><span>#</span>About</h3>
-				<p>
-					Our founder started his digital marketing journey as a Google Ads consultant for small businesses. He then went on to work for agencies to expand his digital marketing knowledge. After 15 years of experience and a move to Raleigh, Carolina Digital was founded.
-				</p>
 
-			</div>
-
-		</main>
-		<footer>
-			<div id="foot_main">
-				<img class="logo" src ={SITE_IMAGE} width="30" height="30">
-			<div class="social-links">
-				<a href="https://www.linkedin.com/company/carolina-digital-llc/" target="_blank">
-					<span>LinkedIn</span>
-				</a><br>
-			</div>
-			<div style="display:block; font-size: .9em;">
-			&copy; {today.getFullYear()} Carolina Digital. All rights reserved.
 		</div>
-		</footer>
+			<div class="social-links">
+				<a href="https://www.linkedin.com/in/jthomas902" target="_blank">
+					<span>LinkedIn</span>
+				</a>
+				<a href="https://github.com/jthomas216" target="_blank">
+					<span>GitHub</span>
+				</a>
+			</div>
+			
+		</header>
+
+			<main class="column">
+
+			<section id="about">
+				<h3 class="mobile_header">ABOUT</h3>
+				<p class="reg">
+					I started my digital marketing journey as a Google Ads consultant for small businesses. I then went on to work for agencies to expand my digital marketing knowledge. After 15 years of experience and a move to Raleigh, I decided to go the consultancy route. My focus is on helping businesses in the Raleigh, NC area but I work with business all over the world.
+				</p>
+
+			</section>
+			<section id="experience">
+				<h3 class="mobile_header">Experience</h3>
+
+				<div class="exp_card">
+					<div class="year">2023 - PRESENT</div>
+					<div class="exp_detail">
+						<h3>Digital Marketing Consultant &#x2022; Carolina Digital</h3>
+						<p>Analyze clients’ digital marketing needs and create plans within budget with a focus on KPIs and ROI.  Provide periodic reporting to ensure KPIs are being met.</p>
+						<div class="tech"><span class="exp">Google Ads</span><span class="exp">Google Analytics</span><span class="exp">SEM Rush</span><span class="exp">LinkedIn Ads</span><span class="exp">HTML & SCSS</span></div>
+					</div>
+				</div>
+				<div class="exp_card">
+					<div class="year">2021 - 2023</div>
+					<div class="exp_detail">
+						<h3>Paid Media Manager &#x2022; DemandScience</h3>
+						<p>Developed paid media strategies and recommended keywords, channels and audiences to fit budget, business goals and benchmarks.  Executed strategies using paid media channels (predominantly using Google Ads, LinkedIn Ads and Meta Ads) to reach intended audience within budget.</p>
+						<div class="tech"><span class="exp">Google Ads</span><span class="exp">Google Analytics</span><span class="exp">SEM Rush</span><span class="exp">LinkedIn Ads</span><span class="exp">SalesForce</span></div>
+					</div>
+				</div>
+				<div class="exp_card">
+					<div class="year">2014 - 2021</div>
+					<div class="exp_detail">
+						<h3>Digital Marketing Strategist &#x2022; Thomson Reuters (FindLaw)</h3>
+						<p>Researched and implemented SEO and PPC strategy to maximize conversions for clients' websites. Managed projects including site launches, site revamps, social media, and PPC campaigns. Worked with internal teams to ensure clients expectations were being exceeded.
+						</p>
+						<div class="tech"><span class="exp">Google Ads</span><span class="exp">Google Analytics</span><span class="exp">SEM Rush</span><span class="exp">SalesForce</span><span class="exp">Kenshoo</span><span class="exp">Adobe Analytics</span></div>
+					</div>
+				</div>
+				<div class="exp_card">
+					<div class="year">2012 - 2014</div>
+					<div class="exp_detail">
+						<h3>Accounts Manager / e-Strategist &#x2022; Milestone Internet Marketing</h3>
+						<p>Coordinated the production of clients’ website by consulting the client and providing internal teams the necessary research to produce SEO friendly content and design. Utilized SEO techniques, online directories, PPC and social networks to target clients’ intended audiences and maximize conversions.</p>
+						<div class="tech"><span class="exp">Google Ads</span><span class="exp">SEO</span><span class="exp">Google Analytics</span><span class="exp">Adobe Analytics</span></div>
+					</div>
+				</div>
+				<a class="resume" href="/Resume-1.pdf"><span>Download Full Resume</span></a>
+				</section>
+			<section id="services">
+				<h3 class="mobile_header">SERVICES</h3>
+
+				<div class="exp_card">
+					<div class="year">Consulting</div>
+					<div class="exp_detail">
+						<ul>
+							<li>Available M-F, 8am - 6pm / EST Timezone</li>
+							<li>Weekly detailed benchmark reports with a focus on profit</li>
+							<li>Direct communication via Slack</li>
+						</ul>
+					</div>
+				</div>
+				<div class="exp_card">
+					<div class="year">Audit & Training</div>
+					<div class="exp_detail">
+						<ul>
+							<li>Performance audit of paid media accounts and landing pages.</li> 
+							<li>Set clear benchmarks for your specific goals to measure success</li>
+							<li>Create strategic plans to incorporate with overall business goals</li>
+							<li>Direct communication via Slack</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+				
+					
+				
+
+			
+<section id="contact">
+	<h3 class="mobile_header">CONTACT</h3>
+	<div class="exp_card">
+		<div class="year">I'm available for work. Contact me if you are looking for a consultant or need of an audit. &#8594;</div>
+		<div class="exp_detail">
+				<form method="POST" action="https://formspree.io/f/mrbqzgly">
+					<input id="name" type="text" name="name" placeholder="name" required />
+			  
+					<input id="email" type="email" name="email" placeholder="email" required />
+			  
+					<textarea id="message" name="message" placeholder="message" required></textarea>
+			  
+					<button id="sub_button" type="submit">Submit</button>
+				  </form>
+		</div>
+	</div>
+
+			  </section>
+			  <footer>Site programmed in <a href="https://astro.build/" target="_blank">Astro</a> using <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>. Design shamelessly <a href="https://www.merriam-webster.com/dictionary/klepto" target="_blank">stolen</a> from many different designers. Site launched on <a href="https://www.cloudflare.com/" target="_blank">CloudFlare</a>
+			  </footer>
+			  </main>
+			  </div>
 	</body>
 </html>
