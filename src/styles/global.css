@@ -204,6 +204,7 @@ main {
 }
 .exp_detail ul {
   margin: 0px;
+  padding-left: 0px;
 }
 h2.head {
   color: #cbe2fd;
@@ -275,6 +276,7 @@ h3.mobile_header {
   color: #cbe2fd;
   display: none;
   font-weight: normal;
+
 }
 @media (max-width: 768px) { /* Adjust breakpoint as needed */
   .wrapper {
