@@ -337,6 +337,9 @@ h3.mobile_header {
   }
   .exp_card {
     flex-direction: column;
+    border:none;
+    padding-left: 0px;
+    margin: 0px;
   }
   .year {
     width: 100%; 
@@ -354,6 +357,13 @@ h3.mobile_header {
   }
   h3.mobile_header {
     display: block;
+  }
+  .exp_card:hover {
+    display: none;
+  }
+  .exp_detail ul {
+    margin-top: 5px;
+    padding-left: 14px;
   }
 }
 
