@@ -55,11 +55,11 @@ h6 {
   
 }
 section, header p  {
-  font-size: 1.2em;
+  font-size: 1rem;
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3rem;
   font-weight: bold; 
   text-align: left;
   color:  #e0eeff;
@@ -83,7 +83,7 @@ img {
   border-radius: 8px;
 }
 nav {
-  display: block;
+  display: flex;
   overflow: hidden;
 }
 nav a {
@@ -118,7 +118,7 @@ span.exp {
   display: flex;
   font-weight: bold;
   color: #cbe2fd;
-  font-size: .9em;
+  font-size: .8rem;
 }
 .social-links a:hover {
   color: #ededed;
@@ -180,7 +180,48 @@ main {
 .exp_card {
   display: flex;
   margin-bottom: 50px;
+  padding-left:15px;
+  padding-right:15px;
+  padding-top:15px;
+  padding-bottom:15px;
+  border: 1px solid rgba(74, 96, 157, 0.0);
 }
+/* From https://css.glass */
+
+section#experience:hover .exp_card {
+  opacity: 0.3;
+}
+section#experience .exp_card:hover { 
+  background: rgba(74, 96, 157, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(74, 96, 157, 0.3);
+  opacity: 1;
+  }
+  section#services:hover .exp_card {
+    opacity: 0.3;
+  }
+  section#services .exp_card:hover { 
+    background: rgba(74, 96, 157, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(74, 96, 157, 0.3);
+    opacity: 1;
+    }
+
+    section#contact .exp_card:hover { 
+      background: rgba(74, 96, 157, 0.2);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border: 1px solid rgba(74, 96, 157, 0.3);
+      opacity: 1;
+      }
 .year {
   flex: 25%;
   color: #e0eeff;
@@ -315,3 +356,26 @@ h3.mobile_header {
     display: block;
   }
 }
+
+/* Gradient CSS */
+.blob {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 650px;
+  height: 650px;
+  border-radius: 100%;
+  background-image: linear-gradient(#1a1d3d 10%, #1f2346);
+  filter: blur(250px);
+  transition: all 0ms ease-out;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  transform: translate(calc(-50% + 15px), -50%);
+  z-index: -1;
+}
+
+
+
+

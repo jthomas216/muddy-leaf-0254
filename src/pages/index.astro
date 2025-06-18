@@ -9,7 +9,7 @@ import { SITE_IMAGE } from '../consts';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<script>
-			const sections = document.querySelectorAll("section");
+	const sections = document.querySelectorAll("section");
 const navLi = document.querySelectorAll("header nav ul li");
 window.onscroll = () => {
   var current = "";
@@ -27,9 +27,22 @@ window.onscroll = () => {
     }
   });
 };
+
+
+var cursor = document.querySelector('.blob');
+
+document.addEventListener('mousemove', function(e){
+  var x = e.clientX;
+  var y = e.clientY;
+  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+});
+
 			</script>
 	</head>
 	<body>
+
+
+<div class="blob"></div>
 <div class ="wrapper">
 		<header class="column">
 			<div>
