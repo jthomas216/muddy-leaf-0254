@@ -198,7 +198,7 @@ section#experience .exp_card:hover {
   opacity: 1;
   }
 
-  section#experience .exp_card:hover .exp_detail h3 {
+  section#experience .exp_card:hover .exp_detail h3, section#services .exp_card .year {
     color: #bafff6;
   }
   section#services:hover .exp_card {
@@ -276,15 +276,6 @@ span.move_text{
 }
 section {
   margin-bottom: 100px;
-}
-a.resume {
-  text-decoration: none;
-  color: #cbe2fd;
-  font-weight: bold;
-
-}
-a.resume:hover {
-  color: #01927f;
 }
 input#name, input#email, textarea#message, button#sub_button {
   width: 100%;  
