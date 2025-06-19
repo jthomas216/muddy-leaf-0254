@@ -198,7 +198,7 @@ section#experience .exp_card:hover {
   opacity: 1;
   }
 
-  section#experience .exp_card:hover .exp_detail h3, section#services .exp_card .year {
+  section#experience .exp_card:hover .exp_detail h3, section#services .exp_card:hover .year {
     color: #bafff6;
   }
   section#services:hover .exp_card {
