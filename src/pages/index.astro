@@ -2,6 +2,8 @@
 import BaseHead from '../components/BaseHead.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { SITE_IMAGE } from '../consts';
+import { Picture } from 'astro:assets';
+import logo from './src/img/logo.svg'
 ---
 
 <!doctype html>
@@ -16,9 +18,9 @@ import { SITE_IMAGE } from '../consts';
 		<div class="wrapper">
 		<header>
 			<div class="column"><div id="cd_logo"><img src="src/img/logo.svg" width="40px"> <span id="company_name">Carolina Digital</span></div></div>
-				
-				
+		<Picture src={logo} alt="A description of my image." />				
 				<div class="column">
+					<>
 				<nav>
 					<ul>
 					<li class="about active"><a href="#about"><span class="nav_hl"></span><span class="move_text">ABOUT</span></a></li>
