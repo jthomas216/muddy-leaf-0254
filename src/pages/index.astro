@@ -8,169 +8,284 @@ import { SITE_IMAGE } from '../consts';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<script>
-	const sections = document.querySelectorAll("section");
-const navLi = document.querySelectorAll("header nav ul li");
-window.onscroll = () => {
-  var current = "";
-
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    if (pageYOffset >= sectionTop - 60) {
-      current = section.getAttribute("id"); }
-  });
-
-  navLi.forEach((li) => {
-    li.classList.remove("active");
-    if (li.classList.contains(current)) {
-      li.classList.add("active");
-    }
-  });
-};
-
-
-var cursor = document.querySelector('.blob');
-
-document.addEventListener('mousemove', function(e){
-  var x = e.clientX;
-  var y = e.clientY;
-  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
-});
-
-			</script>
+		
 	</head>
 	<body>
 
-
-<div class="blob"></div>
-<div class ="wrapper">
-		<header class="column">
-			<div>
-			<h1>Greetings, I'm Jason</h1>
-			<h2 class="head">Digital Marketing Specialist</h2>
-			<p class="reg">
-				I am a Raleigh, NC based paid search and paid social media expert. My primary focus is connecting ad spend to profit.
-			</p>
-			</div>
-			<div>
-			<nav>
-				<ul>
+	<section id="top_header">
+		<div class="wrapper">
+		<header>
+			<div class="column"><div id="cd_logo"><img src="src/img/logo.svg" width="40px"> <span id="company_name">Carolina Digital</span></div></div>
+				
+				
+				<div class="column">
+				<nav>
+					<ul>
 					<li class="about active"><a href="#about"><span class="nav_hl"></span><span class="move_text">ABOUT</span></a></li>
-					<li class="experience"><a href="#experience"><span class="nav_hl"></span><span class="move_text"></span>EXPERIENCE</span></a></li>
 					<li class="services"><a href="#services"><span class="nav_hl"></span><span class="move_text"></span>SERVICES</span></a></li>
 					<li class="contact"><a href="#contact"><span class="nav_hl"></span><span class="move_text"></span>CONTACT</span></a></li>
-				</ul>				
-			</nav>
-
-		</div>
-			<div class="social-links"><span>Find Me &rarr;</span>
-				<a href="https://www.linkedin.com/in/jthomas902" target="_blank">
-					<span>LinkedIn</span>
-				</a>
-				<a href="https://github.com/jthomas216" target="_blank">
-					<span>GitHub</span>
-				</a>
+				</ul>	
+				</nav>
 			</div>
-			
+		
 		</header>
+					 </div>
 
-			<main class="column">
+</section>
 
-			<section id="about">
-				<h3 class="mobile_header">ABOUT</h3>
-				<p class="reg">
-					I started my digital marketing journey as a Google Ads consultant for small businesses. I then went on to work for agencies to expand my digital marketing knowledge. After 15 years of experience and a move to Raleigh, I decided to go the consultancy route. My focus is on helping businesses in the Raleigh, NC area but I work with business all over the world.
-				</p>
+			<section id="intro">
+						<div class="wrapper">
+
+				<h1>Raleigh Based SEO & Paid Media Agency</h1>
+				<h2>Helping local businesses connect products and services to customers, and ad dollars to profit.   
+				</h2>
+				<p>Greetings, I'm Jason. I am a Raleigh based paid search, paid social media and SEO expert. I have over 10 years of experience, both agency and in-house. My main focus is connecting ad spend to profit.</p>
 
 			</section>
-			<section id="experience">
-				<h3 class="mobile_header">Experience</h3>
+			<section id="intro_2">
+						<div class="wrapper">
 
-				<div class="exp_card">
-					<div class="year">2023 - PRESENT</div>
-					<div class="exp_detail">
-						<h3>Digital Marketing Consultant &#x2022; Carolina Digital</h3>
-						<p>Analyze clients’ digital marketing needs and create plans within budget with a focus on KPIs and ROI. Research and implement paid search ads using Google Ads and Microsoft Ads. Provide periodic reporting to ensure KPIs are being met.</p>
-						<div class="tech"><span class="exp">Google Ads</span><span class="exp">Google Analytics</span><span class="exp">SEM Rush</span><span class="exp">LinkedIn Ads</span><span class="exp">HTML & SCSS</span></div>
-					</div>
+				<h2>Quick turnaround, direct support and tailored solution without big agency overhead.</h2>
+				<h2>Wether you are looking for:</h2>
+				<div class="intro_2_list">
+				<div class="intro_2_item"><div class="bracketed-list column">[a]</div><div class="bracketed-content column"><p>Google Ads/ paid social or SEO audit</p></div></div>
+				<div class="intro_2_item"><div class="bracketed-list">[b]</div><div class="bracketed-content"><p>or<br />On-going profit driven paid media/ SEO consultation</p></div></div>
 				</div>
-				<div class="exp_card">
-					<div class="year">2021 - 2023</div>
-					<div class="exp_detail">
-						<h3>Paid Media Manager &#x2022; DemandScience</h3>
-						<p>Developed paid media strategies and recommended keywords, channels and audiences to fit budget, business goals and benchmarks.  Executed strategies using paid media channels (predominantly using Google Ads, LinkedIn Ads and Meta Ads) to reach intended audience within budget.</p>
-						<div class="tech"><span class="exp">Google Ads</span><span class="exp">Google Analytics</span><span class="exp">SEM Rush</span><span class="exp">LinkedIn Ads</span><span class="exp">SalesForce</span></div>
-					</div>
-				</div>
-				<div class="exp_card">
-					<div class="year">2014 - 2021</div>
-					<div class="exp_detail">
-						<h3>Digital Marketing Strategist &#x2022; Thomson Reuters (FindLaw)</h3>
-						<p>Researched and implemented SEO and PPC strategy to maximize conversions for clients' websites. Managed projects including site launches, site revamps, social media, and PPC campaigns. Worked with internal teams to ensure clients expectations were being exceeded.
-						</p>
-						<div class="tech"><span class="exp">Google Ads</span><span class="exp">Google Analytics</span><span class="exp">SEM Rush</span><span class="exp">SalesForce</span><span class="exp">Kenshoo</span><span class="exp">Adobe Analytics</span></div>
-					</div>
-				</div>
-				<div class="exp_card">
-					<div class="year">2012 - 2014</div>
-					<div class="exp_detail">
-						<h3>Accounts Manager / e-Strategist &#x2022; Milestone Internet Marketing</h3>
-						<p>Coordinated the production of clients’ website by consulting the client and providing internal teams the necessary research to produce SEO friendly content and design. Utilized SEO techniques, online directories, PPC and social networks to target clients’ intended audiences and maximize conversions.</p>
-						<div class="tech"><span class="exp">Google Ads</span><span class="exp">SEO</span><span class="exp">Google Analytics</span><span class="exp">Adobe Analytics</span></div>
-					</div>
-				</div>
-				</section>
+			</section>
 			<section id="services">
-				<h3 class="mobile_header">SERVICES</h3>
+						<div class="wrapper">
 
-				<div class="exp_card">
-					<div class="year">Consulting</div>
-					<div class="exp_detail">
-						<ul>
-							<li>Available M-F, 8am - 6pm / EST Timezone</li>
-							<li>Weekly detailed benchmark reports with a focus on profit</li>
-							<li>Direct communication on the messaging platform of your choice</li>
-						</ul>
-					</div>
+				<div class="column left">	
+				<h1>Services</h1>
+				<h2>Profit driven digital marketing services</h2>
+				<p>One person digital ad services built for quick turnover and lasting results</p>
 				</div>
-				<div class="exp_card">
-					<div class="year">Audit & Training</div>
-					<div class="exp_detail">
-						<ul>
-							<li>Performance audit of paid media accounts and landing pages.</li> 
-							<li>Set clear benchmarks for your specific goals to measure success</li>
-							<li>Create strategic plans to incorporate with overall business goals</li>
-							<li>Direct communication on the messaging platform of your choice</li>
-						</ul>
-					</div>
+				<div class="column right">
+					<div class="service_icon"><img src="src/img/strategy-svgrepo-com.svg"></div>
+					<h2>Consulting</h2>
+<ul> <li>Available M-F, 8am - 6pm / EST Timezone</li> <li>Weekly detailed benchmark reports with a focus on profit</li> <li>Direct communication on the messaging platform of your choice</li> </ul>					
+					<div class="service_icon"></div>
+					<div class="service_icon"><img src="src/img/magnifying-glass-backup-svgrepo-com.svg"></div>
+
+<h2>Audit & Training</h2>
+<ul> <li>Performance audit of paid media accounts and landing pages.</li> <li>Set clear benchmarks for your specific goals to measure success</li> <li>Create strategic plans to incorporate with overall business goals</li> <li>Direct communication on the messaging platform of your choice</li> </ul>
+
 				</div>
+
+
 			</section>
-				
-					
-				
+						<section id="expertise">
+						<div class="wrapper">
+			<h1>Expertise</h1>
+			<h2>Digital marketing knowledge for long-term sucess</h2>
+			<p id="exp_subhead">Overview of tools and tactics that I have spend years working with.</p>
+			<div id="exp_details">
+			<div class="column left">	
 
-			
-<section id="contact">
-	<h3 class="mobile_header">CONTACT</h3>
-	<div class="exp_card">
-		<div class="year">I'm available for work. Contact me if you are looking for a consultant or need of an audit. &#8594;</div>
-		<div class="exp_detail">
-				<form method="POST" action="https://formspree.io/f/mrbqzgly">
-					<input id="name" type="text" name="name" placeholder="name" required />
-			  
-					<input id="email" type="email" name="email" placeholder="email" required />
-			  
-					<textarea id="message" name="message" placeholder="message" required></textarea>
-			  
-					<button id="sub_button" type="submit">Submit</button>
-				  </form>
-		</div>
+<div class="exp_card"><h3>Search Engine Marketing</h3>
+				<p>Google Ads. Google Local. PMax. Bing. SEO. AEO.</p></div>
+<div class="exp_card"><h3>Paid Social</h3>
+				<p>Facebook. Instagram. TikTok. LinkedIn. YouTube. X(Twitter).</p><br> <br> </div>
+				</div>
+								<div class="column right">	
+<div class="exp_card"><h3>Analytics & Profit Generation</h3>
+				<p>Google Analytics. Google Tags. Adobe Analyics. Looker Studio. SalesForce. Competitve Analysis. </p></div>
+<div class="exp_card"><h3>Landing Page Optimization</h3>
+				<p>Wordpress. Webflow. HTML/ SCSS </p></div>
+				</div>
+							 </div>
+							 </div>
+			</section> 
+			<section id="process">
+						<div class="wrapper">
+
+				<div class="column left">
+				<h1>What to expect</h1>
+				<h2>A process built for success</h2></div>
+				<div class="column right">
+					<h3>1. Discovery call</h3>
+					<p>We'll start with a in-depth discussion as to what your goals are and how my skill set can align with those goals. This conversation is necessary to ensure my services will lead to meaniful results.</p>
+					<h3>2. Tailored project plan</h3>
+					<p>Wether it is consulting or training, I will develop a detailed plan based on our conversation. We will set deadlines and clear goals.</p>
+					<h3>3. Execution & support</h3>
+					<p>Once the plan is approved, we move onto execution. For training & audits, we will set a time to discuss my findings and a plan to ensure success. For consulting, we will set regular cadence to ensure KPIs are being met.</p>
+				</div>
+
+				</section>
+
+
+	
+				<section id="competition">
+				<div class="wrapper">
+
+				<div class="column left">
+				<h1>The Competition</h1>
+				<h2>Me vs Them</h2>
+				<p>I have over a decade experince in a variety of industries and have gone the always extra mile to bring lasting results. This is what sets me apart from my competitors.</p>
+
+				</div>
+				<div class="column right">
+
+				<table>
+  <tr>
+    <th style="width:50%"></th>
+    <th class="me">Me</th>
+	<th class="them">Agencies</th>
+    <th class="them">Employee</th>
+  </tr>
+  <tr>
+    <td  class="me">Simple On-boarding</td>
+    <td class="me">&check;</td>
+    <td class="them">X</td>
+	    <td class="them">X</td>
+
+  </tr>
+  <tr>
+    <td  class="me">Fixed scope & clear pricing</td>
+    <td class="me">&check;</td>
+    <td class="them">X</i></td>
+	    <td class="them">?</td>
+
+  </tr>
+  <tr>
+    <td  class="me">Direct communication</td>
+    <td class="me">&check;</td>
+    <td class="them">X</td>
+	    <td class="them">&check;</td>
+
+  </tr>
+  <tr>
+    <td  class="me">No bloated teams & handoffs</td>
+    <td  class="me">&check;</td>
+    <td class="them">X</td>
+	    <td class="them">?</td>
+
+  </tr>
+  <tr>
+    <td  class="me">Fast turnaround with no bottle neck</td>
+    <td class="me">&check;</td>
+    <td class="them">X</td>
+	    <td class="them">?</td>
+
+  </tr>
+  <tr>
+    <td  class="me">Clear timeline</td>
+    <td class="me">&check;</td>
+    <td class="them">&check;</td>
+	    <td class="them">?</td>
+
+  </tr>
+  <tr>
+    <td  class="me">Profit focused results</td>
+    <td class="me">&check;</td>
+    <td class="them">?</td>
+	    <td class="them">&check;</td>
+
+  </tr>
+  <tr>
+    <td  class="me">No long-term commitments</td>
+    <td class="me">&check;</td>
+    <td class="them">X</td>
+	    <td class="them">?</td>
+
+  </tr>
+   <tr>
+    <td  class="me">No training cost or time</td>
+	<td class="me">&check;</td>
+    <td class="them">?</td>
+    <td class="them">X</td>
+  </tr>
+</table>
+</div>
+</div>
+
+			</section>	
+<section id="faq">
+<div class="wrapper">
+<div class="column left">
+	<h1>FAQS</h1>
+	<h2>Questions? Answered.</h2>
+
+</div>
+<div class="column right">
+	<div class="accord_wrap">
+
+<button class="accordion"><h3>Can you create and audit landing pages?</h3></button>
+<div class="panel">
+  <p>I work with designers and writers to create effective landing pages, blog post, or any type of web content. But in the absense of a designers or writers, I can create you landing page for you. I work with Wordpress, Webflow and I'm and expert in HTML/ SCSS.</p>
+</div>
+</div>
+<div class="accord_wrap">
+<button class="accordion"><h3>What does a successful paid media campaign look like?</h3></button>
+<div class="panel">
+  <p>I measure success primarily by ROAS (return on ad spend). In all of my effort, I want to make sure that campaigns are leading to measurable profits.</p>
+</div>
+</div>
+<div class="accord_wrap">
+<button class="accordion"><h3>Why choose you over a larger agency?</h3></button>
+<div class="panel">
+  <p>Unlike bigger companies, I give faster turnaround, personailized attention and cost effective solutions. You get direct access to a digital marketing expert who understand your business goals. </p>
+</div>
+</div>
+<div class="accord_wrap">
+<button class="accordion"><h3>Why 'Carolina Digital'?</button>
+<div class="panel">
+  <p>I am proud to say that Raleigh, NC is my home. Both North and South Carolina businesses and people have served me well. I want to return favor by serving the thriving business community of the Carolinas. </p>
+</div>
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+	</div>
 	</div>
 
+			</section>
+			<section id="about">
+						<div class="wrapper">
+
+				<h1>About Me</h1>
+				<h2>Quick professional summary</h2>
+				<p>I started my digital marketing journey as a Google Ads consultant for small businesses. I then went on to work for agencies to expand my digital marketing knowledge. After 15 years of experience and a move to Raleigh, I decided to go the consultancy route. My focus is on helping businesses in the Raleigh, NC area but I work with business all over the world. <a>See my résumé</a></p>
+			</div>
+			</section>
+			
+<section id="contact">
+			<div class="wrapper">
+
+	<div class="column left">				
+		<h2>Looking for a paid media partner? </h2>
+				<p>jason@carolinadigital.co</p>
+				<p>Get in touch to explore how I can help drive lasting growth.</p></div>
+		<div class=" column right">
+			<form method="POST" action="https://formspree.io/f/mrbqzgly">
+					<input id="name" type="text" name="name" placeholder="Name" required />
+			  
+					<input id="email" type="email" name="email" placeholder="Email Address" required />
+			  
+					<textarea id="message" name="message" placeholder="Details" required></textarea>
+			  
+					<button id="sub_button" type="submit">Send Message</button>
+				  </form>
+
+		</div>
 			  </section>
-			  <footer>Site programmed in <a href="https://astro.build/" target="_blank">Astro</a> using <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>. Design shamelessly <a href="https://www.merriam-webster.com/dictionary/klepto" target="_blank">stolen</a> from many different designers. Site launched on <a href="https://www.cloudflare.com/" target="_blank">CloudFlare</a>
-			  </footer>
-			  </main>
-			  </div>
+			  <footer>
+						<div class="wrapper">
+Site programmed in <a href="https://astro.build/" target="_blank">Astro</a> using <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>. Design shamelessly <a href="https://www.merriam-webster.com/dictionary/klepto" target="_blank">stolen</a> from many different designers. Site launched on <a href="https://www.cloudflare.com/" target="_blank">CloudFlare</a>. <br /><a>Cookie Policy.</a> <a>Privacy Policy.</a>
+			 </div>
+</footer>
 	</body>
 </html>
