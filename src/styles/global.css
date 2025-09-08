@@ -84,7 +84,7 @@ h6 {
   font-weight: 400; 
   text-align: left;
   color: #004aad;
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 0.978rem + 2.609vw, 3rem);
   margin: 0px;
 }
 #services .right h2 {
@@ -92,7 +92,7 @@ h6 {
   margin-bottom: 10px;
 }
 #about p, #intro p, #services p, #services ul li,  #expertise p#exp_subhead, #process .wrapper p, #competition p, #faq p {
-  font-size: 2rem;
+  font-size: clamp(1rem, 0.652rem + 1.739vw, 2rem);
   font-weight: normal; 
   text-align: left;
   color: #004aad;
@@ -129,7 +129,7 @@ h6 {
   font-weight: normal;
 }
 .exp_card p {
-  font-size: 2em;
+  font-size: clamp(1rem, 0.652rem + 1.739vw, 2rem);
 }
 .wrapper {
   padding-top: 75px;
@@ -155,7 +155,7 @@ section#services .wrapper .right {
 }
 #contact h2, #contact p {
   color: #f5f5f5;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 1.326rem + 0.87vw, 2rem);
   font-weight: 500; 
   text-align: left;
 }
@@ -231,7 +231,7 @@ section .wrapper, footer .wrapper {
     color: #004aad;
 }
 .bracketed-list {
-  font-size: 2em;
+  font-size: clamp(1rem, 0.652rem + 1.739vw, 2rem);
   width: max-content;
 }
 .bracketed-content p {
@@ -353,11 +353,13 @@ form {
 }
  form, input#name, input#email, textarea#message, button#sub_button {
   font-family: "Roboto", sans-serif;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 1.326rem + 0.87vw, 2rem);
   font-weight: 500; 
   color: #f5f5f5;
  background-color: #004aad; 
  padding: 0px; 
+ cursor: pointer;
+
  }
 
 textarea:focus, input:focus {
