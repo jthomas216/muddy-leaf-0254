@@ -92,7 +92,7 @@ h6 {
   margin-bottom: 10px;
 }
 #about p, #intro p, #services p, #services ul li,  #expertise p#exp_subhead, #process .wrapper p, #competition p, #faq p {
-  font-size: clamp(1rem, 0.652rem + 1.739vw, 2rem);
+  font-size: clamp(1.2rem, 0.922rem + 1.391vw, 2rem);
   font-weight: normal; 
   text-align: left;
   color: #004aad;
@@ -129,7 +129,7 @@ h6 {
   font-weight: normal;
 }
 .exp_card p {
-  font-size: clamp(1rem, 0.652rem + 1.739vw, 2rem);
+  font-size: clamp(1.2rem, 0.922rem + 1.391vw, 2rem);
 }
 .wrapper {
   padding-top: 75px;
@@ -231,7 +231,7 @@ section .wrapper, footer .wrapper {
     color: #004aad;
 }
 .bracketed-list {
-  font-size: clamp(1rem, 0.652rem + 1.739vw, 2rem);
+  font-size: clamp(1.2rem, 0.922rem + 1.391vw, 2rem);
   width: max-content;
 }
 .bracketed-content p {
