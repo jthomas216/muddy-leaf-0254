@@ -59,7 +59,7 @@ h6 {
 #about h1, #services h1, #intro h1, #expertise h1, #process h1, #competition h1, #faq h1 {
   color: black;
   font-weight: 400;
-  font-size: 1.9em;
+  font-size: clamp(1.6rem, 1.496rem + 0.522vw, 1.9rem);
   text-transform: uppercase;
 }
 #about h1, #services h1, #intro h1, #expertise h1, #process h1, #competition h1 , #faq h1 {
@@ -71,9 +71,10 @@ h6 {
    background-size: 40px 40px;
    padding-left: 50px;
    margin-top: 0px;
+   background-position: 0% 0%; 
 }
 #about h2, #intro h2, #intro_2 h2, #services h2, #expertise h2, #process h2, #competition h2, #faq h2 {
-  font-size: 4rem;
+  font-size: clamp(2rem, 1.304rem + 3.478vw, 4rem);
   font-weight: 400; 
   text-align: left;
   color: #004aad;
@@ -97,14 +98,14 @@ h6 {
   color: #004aad;
 }
 .me {
-  font-size: 2rem;
+  font-size: clamp(1.2rem, 0.922rem + 1.391vw, 2rem);
   font-weight: normal; 
   text-align: center;
   color: #004aad;
 
 }
 .them {
-  font-size: 2rem;
+  font-size: clamp(1.2rem, 0.922rem + 1.391vw, 2rem);
   font-weight: normal; 
   color: #53739d;
     text-align: center;
@@ -142,8 +143,15 @@ list-style-position: inside;
   padding-bottom: 100px;
 }
 section#services .wrapper .left {
-  width: 40%;
   padding-right: 200px;
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+}
+section#services .wrapper .right {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
 }
 #contact h2, #contact p {
   color: #f5f5f5;
@@ -174,6 +182,7 @@ section .wrapper, footer .wrapper {
 #exp_details .column  {
   display: flex;
   flex-direction: column;
+  width: 33%;
 }
 #process .wrapper .column, #competition .wrapper .column {
   display: flex;
@@ -226,7 +235,7 @@ section .wrapper, footer .wrapper {
   width: max-content;
 }
 .bracketed-content p {
-  font-size: 4em;
+  font-size: clamp(2rem, 1.304rem + 3.478vw, 4rem);
   margin: 0px;
   padding: 0px;
 }
@@ -251,8 +260,7 @@ header, section#contact {
 header .column {
   display: flex;
   flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
+  flex: auto;
 }
 section#contact .column {
   display: flex;
@@ -379,7 +387,7 @@ footer a {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  width: 500px;
+  width: 100%;
   table-layout: auto;
 }
 
@@ -421,29 +429,32 @@ background-color: Transparent;
 }
 
 @media (max-width: 768px) { /* Adjust breakpoint as needed */
-  .wrapper {
-    flex-direction: column; /* Switch to single column on smaller screens */
-  }
-  .column {
-    width: 100%; /* Each column takes up 100% width */
-  }
+ 
   nav {
     display: none;
   }
-  header p {
+  section .wrapper, footer .wrapper {
+    width: 95%;
+  }
+  #services .wrapper, #exp_details, #process .wrapper, #competition .wrapper, #faq .wrapper, #contact .wrapper {
+    flex-direction: column;  
+  }
+  section#services .wrapper .left {
+    padding-right: 0px;
+  }
+  .exp_card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  #exp_details .column {
     width: 100%;
   }
-  
-  header {
-    padding: 0px;
-  }
-  form {
-    padding-top: 15px;
-    width: 100%;
-    margin-left: 0px;
-  }
-  h3.mobile_header {
-    display: block;
-  }
+  #exp_details .right {
+  padding-left: 0px;
+}
+th, td {
+  text-align: center;
+  padding: 5px;
+}
 
 }
