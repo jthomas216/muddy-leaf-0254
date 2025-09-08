@@ -446,7 +446,7 @@ background-color: Transparent;
     box-sizing: border-box;
   }
   #exp_details .column {
-    width: 200px;
+    width: 100%;
   }
   #exp_details .right {
   padding-left: 0px;
