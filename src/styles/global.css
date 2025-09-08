@@ -456,5 +456,9 @@ th, td {
   text-align: center;
   padding: 5px;
 }
+.employee {
+  display: none;
+
+}
 
 }
