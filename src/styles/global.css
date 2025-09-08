@@ -344,7 +344,6 @@ button#sub_button:focus, button#sub_button::placeholder {
   border-right: none;
 }
 form {
-  width: 100%;
   border-left: none;
   border-right: none;
   border-top: none;
