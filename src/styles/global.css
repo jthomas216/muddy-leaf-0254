@@ -468,5 +468,7 @@ th, td {
   display: none;
 
 }
+#about h1, #services h1, #intro h1, #expertise h1, #process h1, #competition h1 , #faq h1 {
+  background-size: 30px 30px;
 
 }
