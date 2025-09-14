@@ -271,7 +271,7 @@ nav {
 nav a {
   text-decoration: none;
     color: #004aad;  
-    font-size: 1.5em;
+    font-size: clamp(1.4rem, 1.3875rem + 0.2vw, 1.5rem);
 }
 nav ul {
   list-style-type: none;
@@ -292,7 +292,7 @@ span#company_name {
   height: 40px;
   display: flex;
   padding-left: 10px;
-  font-size: 1.5em;
+  font-size: clamp(1.4rem, 1.3875rem + 0.2vw, 1.5rem);
 }
 
 main {
@@ -445,13 +445,17 @@ body#privacy section#add_pages {
   width: 60%;
   margin: 0 auto;
 }
-#resume_wrapper
 
-@media (max-width: 768px) { /* Adjust breakpoint as needed */
- 
-  nav {
-    display: none;
-  }
+@media screen and (max-width: 768px) { /* Adjust breakpoint as needed */
+ nav {
+  margin-left: 0px;
+  padding-top: 30px;
+ }
+
+ #cd_logo {
+  margin: 0 auto;
+}
+  
   section .wrapper, footer .wrapper {
     width: 95%;
   }
