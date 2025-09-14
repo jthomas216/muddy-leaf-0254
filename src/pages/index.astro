@@ -1,60 +1,23 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import { SITE_IMAGE } from '../consts';
+
+import BaseLayout from '/src/pages/layouts/BaseLayout.astro';
 import { Picture } from 'astro:assets';
-import logo from '/src/img/logo.svg'
-import consultingImg from '/src/img/strategy-svgrepo-com.svg'
-import auditImg from '/src/img/magnifying-glass-backup-svgrepo-com.svg'
+import consultingImg from './src/img/strategy-svgrepo-com.svg'
+import auditImg from './src/img/magnifying-glass-backup-svgrepo-com.svg'
 
+const pageID = "index";
+const pageTitle = "Raleigh Based Digtial Marketing Agency";
+const pageDescription = "Whether Google Ads, Facebook, Instagram, X (Twitter) or whichever, the goal is to bring in money. My goals are aligned with yours. Learn More!";
 ---
-
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TFHBXCR6');</script>
-<!-- End Google Tag Manager -->
-		<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ4VCLCM78"></script>
-	</head>
-	<body>
-		<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFHBXCR6"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<BaseLayout pageTitle={pageTitle} pageDescription={pageDescription} pageID={pageID}>
 
 
-	<section id="top_header">
-		<div class="wrapper">
-		<header>
-			<div class="column"><div id="cd_logo"><Picture src={logo} alt="Carolina Digital Logo." width="40"/> <span id="company_name">Carolina Digital</span></div></div>
-				<div class="column">
-					<>
-				<nav>
-					<ul>
-					<li class="about active"><a href="#about"><span class="nav_hl"></span><span class="move_text">ABOUT</span></a></li>
-					<li class="services"><a href="#services"><span class="nav_hl"></span><span class="move_text"></span>SERVICES</span></a></li>
-					<li class="contact"><a href="#contact"><span class="nav_hl"></span><span class="move_text"></span>CONTACT</span></a></li>
-				</ul>	
-				</nav>
-					
-			</div>
-		
-		</header>
-					 </div>
 
-</section>
 
 			<section id="intro">
 						<div class="wrapper">
 
-				<h1>Raleigh Based SEO & Paid Media Agency</h1>
+				<h1>{pageTitle}</h1>
 				<h2>Helping local businesses connect products and services to customers, and ad dollars to profit.   
 				</h2>
 				<p>Greetings, I'm Jason. I am a Raleigh based paid search, paid social media and SEO expert. I have over 10 years of experience, both agency and in-house. My main focus is connecting ad spend to profit.</p>
@@ -277,7 +240,7 @@ for (i = 0; i < acc.length; i++) {
 
 				<h1>About Me</h1>
 				<h2>Quick professional summary</h2>
-				<p>I started my digital marketing journey as a Google Ads consultant for small businesses. I then went on to work for agencies to expand my digital marketing knowledge. After 15 years of experience and a move to Raleigh, I decided to go the consultancy route. My focus is on helping businesses in the Raleigh, NC area but I work with business all over the world. <a href="/src/pages/Resume_site.pdf" download>See my résumé</a></p>
+				<p>I started my digital marketing journey as a Google Ads consultant for small businesses. I then went on to work for agencies to expand my digital marketing knowledge. After 15 years of experience and a move to Raleigh, I decided to go the consultancy route. My focus is on helping businesses in the Raleigh, NC area but I work with business all over the world. <a id="resume" href="/resume" >View my résumé</a></p>
 			</div>
 			</section>
 			
@@ -286,8 +249,8 @@ for (i = 0; i < acc.length; i++) {
 
 	<div class="column left">				
 		<h2>Looking for a paid media partner? </h2>
-				<p><a href="mailto:someone@example.com" target="_blank" id="email_link">jason@carolinadigital.co</a></p>
-				<p>Get in touch to explore how I can help drive lasting growth.</p></div>
+				<p><a href="mailto:jason@carolinadigital.co" target="_blank">jason@carolinadigital.co</a></p>
+				<p>Get in touch to explore how I can help drive lasting growth.</p><p>Find Me &rarr; <a target="_blank" href="https://www.linkedin.com/company/carolina-digital-llc">LinkedIn</a></p></div>
 		<div class=" column right">
 			<form method="POST" action="https://formspree.io/f/mrbqzgly">
 					<input id="name" type="text" name="name" placeholder="Name" required />
@@ -301,10 +264,4 @@ for (i = 0; i < acc.length; i++) {
 
 		</div>
 			  </section>
-			  <footer>
-						<div class="wrapper">
-Site programmed in <a href="https://astro.build/" target="_blank">Astro</a> using <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>. Design shamelessly <a href="https://www.merriam-webster.com/dictionary/klepto" target="_blank">stolen</a> from many different designers. Site launched on <a href="https://www.cloudflare.com/" target="_blank">CloudFlare</a>. <br /><a>Cookie Policy.</a> <a>Privacy Policy.</a>
-			 </div>
-</footer>
-	</body>
-</html>
+			  </BaseLayout>
