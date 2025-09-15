@@ -19,11 +19,15 @@
     "@astrojs/rss": "^4.0.12",
     "@astrojs/sitemap": "^3.5.1",
     "@iconify/json": "^2.2.329",
+    "aos": "^2.3.4",
     "astro": "^5.13.7",
     "free-astro-components": "^1.2.0",
+    "motion": "^12.23.12",
+    "scroll-entrance": "^1.0.0",
     "typescript": "5.8.2"
   },
   "devDependencies": {
+    "@web/dev-server": "^0.4.6",
     "sass-embedded": "^1.86.3",
     "wrangler": "^4.12.0"
   },

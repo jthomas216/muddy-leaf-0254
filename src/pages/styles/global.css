@@ -445,6 +445,25 @@ body#privacy section#add_pages {
   width: 60%;
   margin: 0 auto;
 }
+ aside {
+    position: sticky;
+    top: 1rem; 
+  }
+    body {
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+
+
+    .scroll-section {
+        display: block;
+        opacity: 0;
+    }
+    .scroll-sectionv2 {
+        display: block;
+        opacity: 0;
+    }
 
 @media screen and (max-width: 768px) { /* Adjust breakpoint as needed */
  nav {
@@ -455,7 +474,7 @@ body#privacy section#add_pages {
  #cd_logo {
   margin: 0 auto;
 }
-  
+ 
   section .wrapper, footer .wrapper {
     width: 95%;
   }

@@ -14,14 +14,51 @@ const { pageTitle, pageDescription, pageID } = Astro.props;
     <html lang="en">
 
 	<head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
           <link rel="sitemap" href="/sitemap-index.xml" />
-
+    <meta name="generator" content={Astro.generator} />
             <meta charset="UTF-8">
 		 <title>{pageTitle}</title>
         <meta name="description" content={pageDescription}>
-		
+        
+
+  <script type="module">
+  import { animate, inView } from "https://cdn.jsdelivr.net/npm/motion@12.23.12/+esm" //<-change to internal node
+
+
+    inView(".scroll-section", (element) => {
+        animate(
+            element,
+            { opacity: 1, y: [100, 0] },
+            {
+                duration: 0.9,
+                easing: [0.17, 0.55, 0.55, 1],
+            }
+        )
+
+        return () => animate(element, { opacity: 1})
+    })
+    inView(".scroll-sectionv2", (element) => {
+        animate(
+            element,
+            { opacity: 1, x: [0, 0] },
+            {
+                duration: 0.9,
+                easing: [0.17, 0.55, 0.55, 1],
+            }
+        )
+
+        return () => animate(element, { opacity: 0, x: 0})
+    })
+</script>
+<style>
+
+  
+
+</style>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ4VCLCM78"></script>
 <script>
@@ -44,7 +81,7 @@ const { pageTitle, pageDescription, pageID } = Astro.props;
         </div>
 </section>
     <slot />
+  
     <Footer />
-
       </body>
 </html>
