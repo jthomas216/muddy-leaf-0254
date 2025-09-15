@@ -471,7 +471,7 @@ body#privacy section#add_pages {
         display: block;
         opacity: 0;
     }
- section#process .right {
+ section#process .right,  section#services .wrapper .right {
   background-color:#f5f5f5;
   z-index: 1;
  }
