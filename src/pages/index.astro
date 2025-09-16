@@ -47,16 +47,19 @@ const pageDescription = "Whether Google Ads, Facebook, Instagram, X (Twitter) or
 										</aside>
 
 				</div>
-				<div class="column right scroll-sectionv2">
+				<div class="column right">
+								<div class="scroll-sectionv2">		
+
 					<div class="service_icon"><Picture src={consultingImg} alt="Consulting Logo." width="70" /></div>
 					<h2>Consulting</h2>
 <ul> <li>Available M-F, 8am - 6pm / EST Timezone</li> <li>Weekly detailed benchmark reports with a focus on profit</li> <li>Direct communication on the messaging platform of your choice</li> </ul>					
-					<div class="service_icon"></div>
-					<div class="service_icon">					<div class="service_icon"><Picture src={auditImg} alt="Consulting Logo." width="70" /></div>
+			</div>
+<div class="scroll-sectionv2">		
+<div class="service_icon"><Picture src={auditImg} alt="Consulting Logo." width="70" /></div>
 
 <h2>Audit & Training</h2>
 <ul> <li>Performance audit of paid media accounts and landing pages.</li> <li>Set clear benchmarks for your specific goals to measure success</li> <li>Create strategic plans to incorporate with overall business goals</li> <li>Direct communication on the messaging platform of your choice</li> </ul>
-
+</div>	
 				</div>
 
 
@@ -260,10 +263,12 @@ for (i = 0; i < acc.length; i++) {
 			<div class="wrapper">
 
 	<div class="column left">				
-		<h2>Looking for a paid media partner? </h2>
+		<h2 class="scroll-section">Looking for a paid media partner? </h2>
+		<div id="contact_info">
 				<p><a href="mailto:jason@carolinadigital.co" target="_blank">jason@carolinadigital.co</a></p>
 				<p>Get in touch to explore how I can help drive lasting growth.</p><p>Find Me &rarr; <a target="_blank" href="https://www.linkedin.com/company/carolina-digital-llc">LinkedIn</a></p></div>
-		<div class=" column right">
+		</div>
+				<div class=" column right">
 			<form method="POST" action="https://formspree.io/f/mrbqzgly">
 					<input id="name" type="text" name="name" placeholder="Name" required />
 			  
