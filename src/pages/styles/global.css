@@ -309,7 +309,7 @@ main {
 
 
 span.move_text{
-  padding-left: 20px;
+  padding-right: 20px;
 }
 section, footer {
   display: flex;  
