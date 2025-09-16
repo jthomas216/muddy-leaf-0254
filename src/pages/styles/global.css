@@ -380,8 +380,7 @@ textarea::placeholder, input::placeholder {
 footer {
       color: #f5f5f5;
       padding-bottom: 50px;
-      font-weight: 700;
-       background-color: #004aad;  
+      background-color: #004aad;  
       
 }
 footer a {
