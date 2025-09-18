@@ -5,7 +5,6 @@ User-agent: *
 
 Disallow: /resume
 Disallow: /privacy-policy
-Allow: /
 
 Sitemap: ${sitemapURL.href}
 `;
