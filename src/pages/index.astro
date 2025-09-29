@@ -6,7 +6,7 @@ import consultingImg from '/src/img/strategy-svgrepo-com.svg'
 import auditImg from '/src/img/magnifying-glass-backup-svgrepo-com.svg'
 
 const pageID = "index";
-const pageTitle = "Raleigh Digtial Agency";
+const pageTitle = "Raleigh-Durham Digtial Ad Agency";
 const pageDescription = "Whether Google Ads, Facebook, Instagram, X (Twitter) or whichever, the goal is to bring in money. My goals are aligned with yours. Learn More!";
 ---
 <BaseLayout pageTitle={pageTitle} pageDescription={pageDescription} pageID={pageID}>
@@ -238,10 +238,10 @@ for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
     } else {
-      panel.style.display = "block";
+      panel.style.maxHeight = panel.scrollHeight + "px";
     }
   });
 }
