@@ -418,14 +418,14 @@ th:first-child, td:first-child {
   transition: 0.4s;
 }
 .accordion h3 {
-  background-image: url("src/img/plus-square-svgrepo-com.svg");
+  background-image: url("/src/img/plus-square-svgrepo-com.svg");
   background-position: right 5% top 50%;
   background-size: 40px 40px;
   background-repeat: no-repeat;
   padding-right: 100px;
 }
 .accord_wrap .active h3 {
-  background-image: url("src/img/minus-square-svgrepo-com.svg");
+  background-image: url("/src/img/minus-square-svgrepo-com.svg");
   background-position: right 5% top 50%;
   background-size: 40px 40px;
   background-repeat: no-repeat;
