@@ -557,5 +557,11 @@ section#services {
   position: relative;
   z-index: 200;
 }
+.scroll-section, .scroll-sectionv2 {
+  filter: none !important;
+  transform: none !important;
+  opacity: 1 !important;
+  animation: none !important;
+}
 
 }
