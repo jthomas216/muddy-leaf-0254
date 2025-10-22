@@ -18,6 +18,7 @@ const { pageTitle, pageDescription, pageID } = Astro.props;
 
         <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
           <link rel="sitemap" href="/sitemap-index.xml" />
+          <link rel="canonical" href="https://carolinadigital.co" />
     <meta name="generator" content={Astro.generator} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta charset="UTF-8">
@@ -53,6 +54,17 @@ const { pageTitle, pageDescription, pageID } = Astro.props;
 
         return () => animate(element, { opacity: 0, x: 0})
     })
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Corporation",
+  "name": "Carolina Digital LLC",
+  "alternateName": "Carolina Digital",
+  "url": "https://carolinadigital.co",
+  "logo": "https://carolinadigital.co/_astro/logo.CwX2xYTw_Z1fdg8v.svg",
+  "sameAs": "https://www.linkedin.com/company/carolina-digital-llc"
+}
 </script>
 <style>
 
