@@ -563,5 +563,8 @@ section#services {
   opacity: 1 !important;
   animation: none !important;
 }
+#competition .wrapper .column {
+  padding-right: 0px;
+}
 
 }
