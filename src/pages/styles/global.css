@@ -53,13 +53,13 @@ h6 {
   color: rgb(var(--black));
   
 }
-#about h1, #services h1, #intro h1, #expertise h1, #process h1, #competition h1, #faq h1 {
+#about h2, #services h2, #intro h1, #expertise h2, #process h2, #competition h2, #faq h2 {
   color: black;
   font-weight: 400;
   font-size: clamp(1.4rem, 1.3375rem + 1vw, 1.9rem);
   text-transform: uppercase;
 }
-#about h1, #services h1, #intro h1, #expertise h1, #process h1, #competition h1 , #faq h1 {
+#about h2, #services h2, #intro h1, #expertise h2, #process h2, #competition h2 , #faq h2 {
    background-image:  url("/src/img/main-component-svgrepo-com.svg");
    background-repeat: no-repeat;
    background-size: cover;
@@ -69,14 +69,14 @@ h6 {
    padding-left: 50px;
    background-position: 0% 0%; 
 }
-#about h2, #intro h2, #intro_2 h2, #services h2, #expertise h2, #process h2, #competition h2, #faq h2 {
+#about h3, #intro h2, #intro_2 h2, #services h3, #expertise h3, #process h3, #competition h3, #faq h3 {
   font-size: clamp(2rem, 1.304rem + 3.478vw, 4rem);
   font-weight: 400; 
   text-align: left;
   color: #004aad;
   width: 100%;
 }
-#process h3, #faq h3 {
+#process h4, #faq h4 {
   font-weight: 400; 
   text-align: left;
   color: #004aad;
@@ -84,7 +84,7 @@ h6 {
   margin: 0px;
   padding-top: inherit;
 }
-#services .right h2 {
+#services .right h3 {
   margin-top: 0px;
   margin-bottom: 10px;
 }
@@ -118,7 +118,7 @@ h6 {
     text-align: center;
 
 }
-#expertise h3, #expertise p {
+#expertise h4, #expertise p {
     color: #004aad;
 }
 .exp_card {
@@ -131,7 +131,7 @@ h6 {
   display: block;
   margin-bottom: 30px;
 } 
-.exp_card h3 {
+.exp_card h4 {
   font-size: 1.4em;
   font-weight: normal;
 }
@@ -421,14 +421,14 @@ th:first-child, td:first-child {
   font-size: 15px;
   transition: 0.4s;
 }
-.accordion h3 {
+.accordion h4 {
   background-image: url("/src/img/plus-square-svgrepo-com.svg");
   background-position: right 5% top 50%;
   background-size: 40px 40px;
   background-repeat: no-repeat;
   padding-right: 100px;
 }
-.accord_wrap .active h3 {
+.accord_wrap .active h4 {
   background-image: url("/src/img/minus-square-svgrepo-com.svg");
   background-position: right 5% top 50%;
   background-size: 40px 40px;
@@ -500,7 +500,9 @@ body#privacy section#add_pages {
   background-color: #004aad;
   z-index: 1;
 }
-
+section#services {
+  background-color: #f5f5f5;
+}
 
 @media screen and (max-width: 768px) { /* Adjust breakpoint as needed */
  nav {
@@ -539,7 +541,7 @@ section#competition table th, ection#competition table td {
   display: none;
 
 }
-#about h1, #services h1, #intro h1, #expertise h1, #process h1, #competition h1 , #faq h1 {
+#about h2, #services h2, #intro h1, #expertise h2, #process h2, #competition h2, #faq h2 {
   background-size: 30px 30px;
     padding-left:35px;
 
@@ -547,4 +549,13 @@ section#competition table th, ection#competition table td {
 #process .wrapper .column {
     padding-right: 0px;
 }
+#resume_wrapper {
+  width: 90%;
+}
+section, footer {padding-bottom: 50px;}
+section#services {
+  position: relative;
+  z-index: 200;
+}
+
 }
