@@ -361,7 +361,16 @@ for (i = 0; i < acc.length; i++) {
 					<input id="name" type="text" name="name" placeholder="Name" required />
 			  
 					<input id="email" type="email" name="email" placeholder="Email Address" required />
-					<textarea id="message" name="message" placeholder="Details (Audit or Consultation)" required></textarea>
+					<input id="company" type="company" name="company" placeholder="Company Name" required />
+					<input id="website" type="website" name="website" placeholder="Website" required />
+					<label id="cbox_wrap">
+					<label>Project Type:</label>
+					<label class="check_container">Audit</label>
+					<input type="checkbox" class="cbox" name="audit">
+					<label class="check_container">Consulting</label>
+					<input type="checkbox" class="cbox" name="consulting">
+					</label>
+					<textarea id="message" name="message" placeholder="Details"></textarea>
 			  
 					<button id="sub_button" type="submit">Send Message</button>
 				  </form>

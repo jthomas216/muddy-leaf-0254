@@ -315,7 +315,7 @@ section, footer {
 footer {
   margin: 0 auto;
 }
-input#name, input#email, textarea#message {
+input#name, input#email, input#company, textarea#message, input#website {
   width: 100%;
     border-left: none;
   border-right: none;
@@ -323,9 +323,8 @@ input#name, input#email, textarea#message {
   border-bottom: 2px solid;
   border-bottom-color: #f5f5f5;
  margin-bottom: 30px;
- margin-top: 30px;
-
 }
+
 button#sub_button {
   background: none;
   text-align: left;
@@ -349,7 +348,7 @@ form {
   background-color: #004aad;  
   padding: 0px;
 }
- form, input#name, input#email, textarea#message, button#sub_button {
+ form, input#name, input#email, input#company, textarea#message, button#sub_button, input#website  {
   font-family: "Roboto", sans-serif;
   font-size: clamp(1.5rem, 1.326rem + 0.87vw, 2rem);
   font-weight: 500; 
@@ -357,9 +356,23 @@ form {
  background-color: #004aad; 
  padding: 0px; 
  cursor: pointer;
-
  }
-
+ .check_container {
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1.5rem, 1.326rem + 0.87vw, 2rem);
+ }
+input[type="checkbox"]
+{
+  width: 2em;   /* or use px, rem, etc. */
+  height: 2em;  /* use the same unit for consistency */
+  /* Optional: adjust vertical alignment if needed */
+  vertical-align: middle; 
+}
+#cbox_wrap{
+  border-bottom: 2px solid #f5f5f5;
+  display: block;
+  margin-bottom: 30px;
+}
 textarea:focus, input:focus {
     color: #f5f5f5;
       border-left: none;
@@ -370,8 +383,6 @@ textarea::placeholder, input::placeholder {
       background-color: #004aad;
         border-left: none;
   border-right: none;
-
-
 }
 footer {
       color: #f5f5f5;
