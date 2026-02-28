@@ -365,15 +365,22 @@ for (i = 0; i < acc.length; i++) {
 					<input id="website" type="website" name="website" placeholder="Website" required />
 					<label id="cbox_wrap">
 					<label>Project Type:</label>
-					<label class="check_container">Audit</label>
-					<input type="checkbox" class="cbox" name="audit">
-					<label class="check_container">Consulting</label>
-					<input type="checkbox" class="cbox" name="consulting">
+					<input type="radio" name="project" class="cbox" id="audit" value="audit" required >
+					<label for="audit"  class="radio_container">Audit</label>
+					<input type="radio" name="project" class="cbox" id="consulting" value="consulting">
+					<label for="consulting" class="radio_container">Consulting</label>
 					</label>
 					<textarea id="message" name="message" placeholder="Details"></textarea>
 			  
-					<button id="sub_button" type="submit">Send Message</button>
+					<button onclick="myFunction()" id="sub_button" type="submit">Send Message</button>
 				  </form>
+
+				  <script>
+					function myFunction() {
+					document.getElementById("myCheck").required = true;
+					document.getElementById("demo").innerHTML = "The required property was set. The checkbox must now be checked before submitting the form.";
+					}
+				</script>
 
 		</div>
 			  </section>
