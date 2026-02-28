@@ -363,13 +363,17 @@ for (i = 0; i < acc.length; i++) {
 					<input id="email" type="email" name="email" placeholder="Email Address" required />
 					<input id="company" type="company" name="company" placeholder="Company Name" required />
 					<input id="website" type="website" name="website" placeholder="Website" required />
-					<label id="cbox_wrap">
-					<label>Project Type:</label>
+					<div id="cbox_wrap">
+					<label id="project">Project Type:</label>
+					<div class="radio_wrap">
 					<input type="radio" name="project" class="cbox" id="audit" value="audit" required >
 					<label for="audit"  class="radio_container">Audit</label>
+					</div>
+					<div class="radio_wrap">
 					<input type="radio" name="project" class="cbox" id="consulting" value="consulting">
 					<label for="consulting" class="radio_container">Consulting</label>
-					</label>
+					</div>
+					</div>
 					<textarea id="message" name="message" placeholder="Details"></textarea>
 			  
 					<button onclick="myFunction()" id="sub_button" type="submit">Send Message</button>
