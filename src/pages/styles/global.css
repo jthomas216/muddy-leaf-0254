@@ -126,6 +126,7 @@ html {
   width: 400px; 
   display: block;
   margin-bottom: 30px;
+  height: 100%;
 } 
 .exp_card h4 {
   font-size: 1.4em;
@@ -366,6 +367,8 @@ input[type="radio"]
 {
   width: 2em;   /* or use px, rem, etc. */
   height: 2em;  /* use the same unit for consistency */
+  cursor: pointer;
+
   /* Optional: adjust vertical alignment if needed */
 }
 #cbox_wrap{
